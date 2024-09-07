@@ -101,7 +101,33 @@ class Graph
             Console.WriteLine($"Vértice {vertex} não existe.");
         }
     }
+    // Método de DFS
+    public void DFS(int startVertex)
+    {
+        // Conjunto para rastrear os nós visitados
+        HashSet<int> visited = new HashSet<int>();
 
+        // Chama a função recursiva para fazer a busca em profundidade
+        DFSRecursive(startVertex, visited);
+    }
+
+    // Método recursivo de DFS
+    private void DFSRecursive(int vertex, HashSet<int> visited)
+    {
+        // Marca o nó como visitado
+        visited.Add(vertex);
+        Console.WriteLine("Visitando vértice: " + vertex);
+
+        // Percorre todos os vizinhos do vértice atual
+        foreach (var neighbor in adjList[vertex])
+        {
+            // Se o vizinho não foi visitado, faz a recursão
+            if (!visited.Contains(neighbor))
+            {
+                DFSRecursive(neighbor, visited);
+            }
+        }
+    }
     // Método principal para testar o grafo
    public void Test()
     {
@@ -131,4 +157,26 @@ class Graph
         Console.WriteLine("\nGrafo após remover o vértice 3:");
         graph.PrintGraph();
     }
+
+    public void TestDFS()
+    {
+        Graph graph = new Graph();
+
+        // Adicionando vértices e arestas
+        graph.AddEdge(0, 1);
+        graph.AddEdge(0, 2);
+        graph.AddEdge(1, 2);
+        graph.AddEdge(1, 3);
+        graph.AddEdge(3, 4);
+
+        // Imprimindo o grafo
+        Console.WriteLine("Grafo:");
+        graph.PrintGraph();
+
+        // Realizando a busca em profundidade
+        Console.WriteLine("\nBusca em Profundidade (DFS):");
+        graph.DFS(0);
+    }
+
+
 }

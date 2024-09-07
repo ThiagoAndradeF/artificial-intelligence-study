@@ -1,4 +1,5 @@
 ﻿using System;
+using deepsearch.Quests;
 using deepsearch.Utilities;
 
 namespace ConsoleAppExample
@@ -7,15 +8,17 @@ namespace ConsoleAppExample
     {
         static void Main(string[] args)
         {
-            // Criando uma instância da classe 'MinhaClasse'
             Graph minhaClasse = new Graph();
+            QueenProblem queenProblem = new QueenProblem();
             
-            // Chamando o método 'DizerOla' da classe 'MinhaClasse'
-            minhaClasse.Test();
-            
-            // Mantém a janela do console aberta até pressionar uma tecla
+            // minhaClasse.Test();
+            // minhaClasse.TestDFS();
+            queenProblem.Resolver();
             Console.WriteLine("Pressione qualquer tecla para sair...");
             Console.ReadKey();
+
+
+
         }
     }
 }
