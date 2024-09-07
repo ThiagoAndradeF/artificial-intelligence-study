@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/thiago/Desktop/Colege/ArtificialIntelligence/deepSearch/deepSearch.csproj",
+      "projectUniqueName": "/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/deepSearch.csproj",
       "projectName": "deepSearch",
-      "projectPath": "/home/thiago/Desktop/Colege/ArtificialIntelligence/deepSearch/deepSearch.csproj",
+      "projectPath": "/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/deepSearch.csproj",
       "packagesPath": "/home/thiago/.nuget/packages/",
-      "outputPath": "/home/thiago/Desktop/Colege/ArtificialIntelligence/deepSearch/obj/",
+      "outputPath": "/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/thiago/.nuget/NuGet/NuGet.Config"

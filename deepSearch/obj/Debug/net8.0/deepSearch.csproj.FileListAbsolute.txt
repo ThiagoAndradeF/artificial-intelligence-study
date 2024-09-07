@@ -1,0 +1,15 @@
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/bin/Debug/net8.0/deepSearch
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/bin/Debug/net8.0/deepSearch.deps.json
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/bin/Debug/net8.0/deepSearch.runtimeconfig.json
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/bin/Debug/net8.0/deepSearch.dll
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/bin/Debug/net8.0/deepSearch.pdb
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/deepSearch.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/deepSearch.AssemblyInfoInputs.cache
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/deepSearch.AssemblyInfo.cs
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/deepSearch.csproj.CoreCompileInputs.cache
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/deepSearch.sourcelink.json
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/deepSearch.dll
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/refint/deepSearch.dll
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/deepSearch.pdb
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/deepSearch.genruntimeconfig.cache
+/home/thiago/Desktop/Colege/artificial-intelligence-study/deepSearch/obj/Debug/net8.0/ref/deepSearch.dll
