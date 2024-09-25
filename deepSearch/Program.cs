@@ -10,15 +10,9 @@ namespace ConsoleAppExample
         {
             Graph minhaClasse = new Graph();
             QueenProblem queenProblem = new QueenProblem();
-            
-            // minhaClasse.Test();
-            // minhaClasse.TestDFS();
-            queenProblem.Resolver();
+            queenProblem.Resolver(int.Parse(args[0]));
             Console.WriteLine("Pressione qualquer tecla para sair...");
             Console.ReadKey();
-
-
-
         }
     }
 }

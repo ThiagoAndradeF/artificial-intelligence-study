@@ -6,11 +6,27 @@ public class QueenProblem{
     // Função para imprimir o tabuleiro
     static void ImprimirTabuleiro(int[,] tabuleiro)
     {
+        // Emojis para representar as casas e as rainhas
+        string rainha = "👑";
+        string quadradoBranco = "⬜";
+        string quadradoPreto = "⬛";
+
         for (int i = 0; i < N; i++)
         {
             for (int j = 0; j < N; j++)
             {
-                Console.Write(tabuleiro[i, j] + " ");
+                if (tabuleiro[i, j] == 1)
+                {
+                    Console.Write(rainha + "");
+                }
+                else
+                {
+                    // Alterna entre branco e preto dependendo da posição
+                    if ((i + j) % 2 == 0)
+                        Console.Write(quadradoBranco + "");
+                    else
+                        Console.Write(quadradoPreto + "");
+                }
             }
             Console.WriteLine();
         }
@@ -39,18 +55,18 @@ public class QueenProblem{
             if (tabuleiro[i, j] == 1)
                 return false;
         }
-
         return true;
     }
 
     // Função recursiva para resolver o problema das 8 damas
-    static bool ResolverDamas(int[,] tabuleiro, int coluna)
+    // Função recursiva para resolver o problema das 8 damas
+    static bool ResolverDamas(int[,] tabuleiro, int coluna, int primeiraLinha = 0)
     {
         // Caso base: se todas as damas foram colocadas, retorna verdadeiro
         if (coluna >= N)
             return true;
         // Tenta colocar uma dama em cada linha da coluna atual
-        for (int i = 0; i < N; i++)
+        for (int i = primeiraLinha; i < N; i++)
         {
             // Verifica se a posição é segura
             if (VerificarSeguranca(tabuleiro, i, coluna))
@@ -64,23 +80,31 @@ public class QueenProblem{
                 tabuleiro[i, coluna] = 0;
             }
         }
-
-        // Se não for possível colocar uma dama em nenhuma linha desta coluna, retorna falso
+        // Se não for possível colocar uma dama em nenhuma 
+        // linha desta coluna, retorna falso
         return false;
     }
 
-    public void Resolver()
+    public void Resolver(int n)
     {
-        int[,] tabuleiro = new int[N, N];
-
+        N=n;
         // Inicia o algoritmo
-        if (ResolverDamas(tabuleiro, 0))
+        for(int i = 0; i < N; i++)
         {
-            ImprimirTabuleiro(tabuleiro);
-        }
-        else
-        {
-            Console.WriteLine("Não existe solução.");
+            var tabuleiro = new int[N, N];
+            if (ResolverDamas(tabuleiro, 0, i))
+            {
+                Console.Clear();
+                Console.WriteLine($"Solução para a dama na linha {i + 1}:");
+                ImprimirTabuleiro(tabuleiro);
+            }
+            else
+            {
+                Console.WriteLine("Não existe solução.");
+            }
+
+            Task.Delay(1000).Wait();
+            
         }
     }
 
