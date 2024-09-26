@@ -7,7 +7,7 @@ public class Filme{
     public int tempoAssistidoEmMinutos{get;set;}
     public int tempoLancamento{get;set;}
 }
-public class Usuário{ 
+public class Usuario{ 
     public List<Filme> filmesAssistidos{get;set;}
     public int idade {get;set;}
     public GeneroPessoa idade {get;set;}
