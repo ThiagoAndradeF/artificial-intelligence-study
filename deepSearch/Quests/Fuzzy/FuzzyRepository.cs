@@ -1,21 +1,19 @@
-namespace deepsearch.Repository;
+namespace deepsearch.Quests.Fuzzy;
 public class Filme{
-    public int faixaEtareaMinima{get;set;}
     public List<GeneroFilme> generos{get;set;}
     public List<Atores> elenco{get;set;}
 
-    public int tempoAssistidoEmMinutos{get;set;}
-    public int tempoLancamento{get;set;}
+    public string Nome{get;set;}
 }
 public class Usuario{ 
     public List<Filme> filmesAssistidos{get;set;}
     public int idade {get;set;}
-    public GeneroPessoa idade {get;set;}
+    public GeneroPessoa genero {get;set;}
 
 }
 public class Atores{
-    public int id{get;set}
-    public int idade{get;set;}
+    public int id{get;set;}
+    public string nome{get;set;}
 }
 
 public enum GeneroFilme
@@ -36,7 +34,8 @@ public enum GeneroFilme
     Biografia = 14,
     Guerra = 15,
     Faroeste = 16,
-    Esporte = 17
+    Esporte = 17,
+    Crime = 18
 }
 public enum GeneroPessoa
 {
