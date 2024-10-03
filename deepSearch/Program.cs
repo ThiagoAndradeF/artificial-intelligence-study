@@ -24,7 +24,12 @@ namespace ConsoleAppExample
         {
             // var _service = new FuzzyService();
             var _usuario = FuzzyService.InscreverUsuario();
-            var _filmeRecomendado = FuzzyService.SelecionarFilmes(_usuario, 5);
+            // var _filmes = FuzzyFactory.GerarFilmes();   
+            FuzzyService.SelecionarFilmes(_usuario, 5);
+            // FuzzyService.recomendarFilme(_usuario, _filmes);
+            
+            
+
         }
     }
 }

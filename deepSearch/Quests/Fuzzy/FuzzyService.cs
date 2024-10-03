@@ -6,7 +6,7 @@ namespace deepsearch.Quests.Fuzzy
 {
     public class FuzzyService
     {
-        private static Filme recomendarFilme(Usuario usuario, List<Filme> todosOsFilmes)
+        public static Filme recomendarFilme(Usuario usuario, List<Filme> todosOsFilmes)
         {
             var filmesRecomendados = new List<(Filme filme, double pontuacao)>();
 
@@ -15,8 +15,21 @@ namespace deepsearch.Quests.Fuzzy
                 double pontuacao = calcularPontuacao(usuario.filmesAssistidos, filme);
                 filmesRecomendados.Add((filme, pontuacao));
             }
+            var _result = filmesRecomendados.OrderByDescending(f => f.pontuacao).FirstOrDefault().filme;
+            string _elencoFilme = "";    
+            
+            foreach (var item in _result.elenco)
+            {
+                _elencoFilme += item.nome + ", ";                
+            }
+            string _generoFilme = "";
+            foreach (var item in _result.generos)
+            {
+                _generoFilme += item + "/ ";
+            }
+            Console.WriteLine(_result.Nome + " - Elencos: " + _generoFilme +  " - Atores: " + _elencoFilme);
 
-            return filmesRecomendados.OrderByDescending(f => f.pontuacao).FirstOrDefault().filme;
+            return _result;
         }
 
         private static double calcularPontuacao(List<Filme> filmesAssistidos, Filme filme)
@@ -68,7 +81,7 @@ namespace deepsearch.Quests.Fuzzy
                 return usuario;
             }
             usuario.filmesAssistidos.Add(filmes[numeroFilme - 1]);
-            var _filmeRecomendado = recomendarFilme(usuario, filmes);
+            recomendarFilme(usuario, filmes);
             return SelecionarFilmes(usuario,numeroFilmesSelecao ,numeroInicial +1);
         }
         

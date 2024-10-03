@@ -24,7 +24,7 @@ public static class FuzzyFactory{
         {
             atores.Add(new Atores
             {
-                id = i,
+                id = i+1,
                 nome = nomesAtores[i],
             });
         }
@@ -37,41 +37,48 @@ public static class FuzzyFactory{
         {
             new Filme
             {
-                Nome = "Titanic",
+                Nome = "0 - FECHAR",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Romance },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 1).FirstOrDefault()} // Leonardo DiCaprio
+
             },
             new Filme
             {
-                Nome = "Inception",
+                Nome = "1 - Titanic",
+                generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Romance },
+                elenco = new List<Atores> { atores.Where(a =>a.id == 1).FirstOrDefault()} // Leonardo DiCaprio
+            },
+            new Filme   
+            {
+                Nome = "2 - Inception",
                 generos = new List<GeneroFilme> { GeneroFilme.FiccaoCientifica, GeneroFilme.Acao },
                 elenco = new List<Atores> 
                 {
-                    atores.Where(a =>a.id == 1).FirstOrDefault(), // Leonardo DiCaprio
+                    atores.Where(a =>a.id == 0).FirstOrDefault(), // Leonardo DiCaprio
                     atores.Where(a =>a.id == 2).FirstOrDefault() // Elliot Page
                 }
             },
             new Filme
             {
-                Nome = "The Revenant",
+                Nome = "3 - The Revenant",
                 generos = new List<GeneroFilme> { GeneroFilme.Aventura, GeneroFilme.Drama },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 2).FirstOrDefault() } // Leonardo DiCaprio
             },
             new Filme
             {
-                Nome = "Juno",
+                Nome = "4 - Juno",
                 generos = new List<GeneroFilme> { GeneroFilme.Comedia, GeneroFilme.Drama },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 2).FirstOrDefault()  } // Elliot Page
             },
             new Filme
             {
-                Nome = "The Godfather",
+                Nome = "5 - The Godfather",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Policial },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 3).FirstOrDefault()  } // Marlon Brando
             },
             new Filme
             {
-                Nome = "The Matrix",
+                Nome = "6 - The Matrix",
                 generos = new List<GeneroFilme> { GeneroFilme.FiccaoCientifica, GeneroFilme.Acao },
                 elenco = new List<Atores> 
                 {
@@ -81,25 +88,25 @@ public static class FuzzyFactory{
             },
             new Filme
             {
-                Nome = "John Wick",
+                Nome = "7 - John Wick",
                 generos = new List<GeneroFilme> { GeneroFilme.Acao, GeneroFilme.Suspense },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 4).FirstOrDefault()  } // Keanu Reeves
             },
             new Filme
             {
-                Nome = "Gladiator",
+                Nome = "8 - Gladiator",
                 generos = new List<GeneroFilme> { GeneroFilme.Acao, GeneroFilme.Drama },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 6).FirstOrDefault() } // Russell Crowe
             },
             new Filme
             {
-                Nome = "A Beautiful Mind",
+                Nome = "9 - A Beautiful Mind",
                 generos = new List<GeneroFilme> { GeneroFilme.Biografia, GeneroFilme.Drama },
                 elenco = new List<Atores> {atores.Where(a =>a.id == 6).FirstOrDefault() } // Russell Crowe
             },
             new Filme
             {
-                Nome = "The Dark Knight",
+                Nome = "10 - The Dark Knight",
                 generos = new List<GeneroFilme> { GeneroFilme.Acao, GeneroFilme.Crime },
                 elenco = new List<Atores> 
                 {
@@ -109,13 +116,13 @@ public static class FuzzyFactory{
             },
             new Filme
             {
-                Nome = "Joker",
+                Nome = "11 - Joker",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Crime },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 8).FirstOrDefault() } // Joaquin Phoenix
             },
             new Filme
             {
-                Nome = "Fight Club",
+                Nome = "12 - Fight Club",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Suspense },
                 elenco = new List<Atores> 
                 {
@@ -125,7 +132,7 @@ public static class FuzzyFactory{
             },
             new Filme
             {
-                Nome = "The Prestige",
+                Nome = "13 - The Prestige",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Suspense },
                 elenco = new List<Atores> 
                 {
@@ -135,13 +142,13 @@ public static class FuzzyFactory{
             },
             new Filme
             {
-                Nome = "Her",
+                Nome = "14 - Her",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Romance, GeneroFilme.FiccaoCientifica },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 8).FirstOrDefault()  } // Joaquin Phoenix
             },
             new Filme
             {
-                Nome = "Once Upon a Time in Hollywood",
+                Nome = "15 - Once Upon a Time in Hollywood",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Comedia },
                 elenco = new List<Atores> 
                 {
@@ -151,25 +158,25 @@ public static class FuzzyFactory{
             },
             new Filme
             {
-                Nome = "10 Things I Hate About You",
+                Nome = "16 - 10 Things I Hate About You",
                 generos = new List<GeneroFilme> { GeneroFilme.Comedia, GeneroFilme.Romance },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 13).FirstOrDefault() } // Heath Ledger
             },
            new Filme
             {
-                Nome = "500 Days of Summer",
+                Nome = "17 - 500 Days of Summer",
                 generos = new List<GeneroFilme> { GeneroFilme.Comedia, GeneroFilme.Romance },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 2).FirstOrDefault()  } // Joseph Gordon-Levitt
             },
             new Filme
             {
-                Nome = "The Insider",
+                Nome = "18 - The Insider",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Biografia },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 6).FirstOrDefault() } // Russell Crowe
             },
             new Filme
             {
-                Nome = "Tropic Thunder",
+                Nome = "19 - Tropic Thunder",
                 generos = new List<GeneroFilme> { GeneroFilme.Comedia, GeneroFilme.Acao },
                 elenco = new List<Atores> 
                 {
@@ -179,19 +186,19 @@ public static class FuzzyFactory{
             },
             new Filme
             {
-                Nome = "The Aviator",
+                Nome = "20 - The Aviator",
                 generos = new List<GeneroFilme> { GeneroFilme.Biografia, GeneroFilme.Drama },
                 elenco = new List<Atores> {atores.Where(a =>a.id == 1).FirstOrDefault()  } // Leonardo DiCaprio
             },
             new Filme
             {
-                Nome = "American Psycho",
+                Nome = "21 - American Psycho",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Suspense },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 7).FirstOrDefault() } // Christian Bale
             },
             new Filme
             {
-                Nome = "Brokeback Mountain",
+                Nome = "22 - Brokeback Mountain",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama, GeneroFilme.Romance },
                 elenco = new List<Atores> 
                 {
@@ -201,7 +208,7 @@ public static class FuzzyFactory{
             },
             new Filme
             {
-                Nome = "Se7en",
+                Nome = "23 - Se7en",
                 generos = new List<GeneroFilme> { GeneroFilme.Suspense, GeneroFilme.Crime },
                 elenco = new List<Atores> 
                 {
@@ -211,19 +218,19 @@ public static class FuzzyFactory{
             },
             new Filme
             {
-                Nome = "The Cider House Rules",
+                Nome = "24 - The Cider House Rules",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 6).FirstOrDefault() } // Michael Caine
             },
             new Filme
             {
-                Nome = "Alfie",
+                Nome = "25 - Alfie",
                 generos = new List<GeneroFilme> { GeneroFilme.Comedia, GeneroFilme.Drama },
                 elenco = new List<Atores> { atores.Where(a =>a.id == 6).FirstOrDefault() } // Michael Caine
             },
             new Filme
             {
-                Nome = "The Shawshank Redemption",
+                Nome = "26 - The Shawshank Redemption",
                 generos = new List<GeneroFilme> { GeneroFilme.Drama },
                 elenco = new List<Atores> 
                 {
@@ -233,7 +240,7 @@ public static class FuzzyFactory{
             },
             new Filme
             {
-                Nome = "Blade Runner 2049",
+                Nome = "27 - Blade Runner 2049",
                 generos = new List<GeneroFilme> { GeneroFilme.FiccaoCientifica, GeneroFilme.Drama },
                 elenco = new List<Atores> 
                 {
